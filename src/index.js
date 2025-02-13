@@ -105,14 +105,14 @@ const updateSheets = async (gsaConfig) => {
 const dbUpdate_loop = async () => {
   while (true) {
     await updateDB(wbConfig.wb_key);
-    await sleep(DAY);
+    await sleep(HOUR);
   }
 };
 
 const sheetsUpdate_loop = async () => {
   while (true) {
     await updateSheets(gsaConfig);
-    await sleep(HOUR);   
+    await sleep(DAY);   
   }
 };
 
